@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Supporting Portfolio Links</title>
+    <title>Portfolio Showcase</title>
+
     <style>
         * {
             margin: 0;
@@ -14,67 +15,146 @@
 
         body {
             min-height: 100vh;
+            background: linear-gradient(135deg, #eef2ff, #dbeafe, #f8fafc);
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #eef2ff, #dbeafe);
-            padding: 20px;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
         }
 
         .card {
             background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(14px);
+            border-radius: 24px;
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            width: 100%;
-            max-width: 500px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .title {
             text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
         }
 
-        h2 {
-            font-size: 28px;
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 35px;
+            font-size: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .link-card {
+            text-decoration: none;
+            background: white;
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: 0.35s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .link-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.18);
+            border-color: #3b82f6;
+        }
+
+        .link-title {
+            font-size: 18px;
+            font-weight: 600;
             color: #1e293b;
-            margin-bottom: 25px;
+            margin-bottom: 8px;
         }
 
-        .link-btn {
-            display: inline-block;
-            padding: 14px 24px;
+        .link-url {
+            font-size: 13px;
+            color: #64748b;
+            word-break: break-word;
+        }
+
+        .media-btn {
+            display: block;
+            text-align: center;
+            margin-top: 35px;
+            padding: 16px 24px;
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
             text-decoration: none;
-            border-radius: 12px;
-            font-size: 16px;
+            border-radius: 14px;
             font-weight: 600;
+            box-shadow: 0 8px 22px rgba(37, 99, 235, 0.25);
             transition: 0.3s ease;
-            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
         }
 
-        .link-btn:hover {
+        .media-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 22px rgba(37, 99, 235, 0.35);
-        }
-
-        p {
-            margin-top: 15px;
-            color: #64748b;
-            font-size: 14px;
+            box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <h2>Sample Edited Files</h2>
+<div class="container">
+    <div class="card">
+        <h1 class="title">Portfolio Showcase</h1>
+        <p class="subtitle">Projects • Platforms • Media Works • Live Websites</p>
 
-    <a class="link-btn"
-       href="https://drive.google.com/drive/folders/1sBTirjD36uSM-ibhVrxiK7gyg6-BvWlj?usp=sharing"
-       target="_blank">
-        View Edited Photos / Media Work
-    </a>
+        <div class="grid">
+            <a href="https://algorhythm26.netlify.app/" target="_blank" class="link-card">
+                <div class="link-title">Algorhythm 26</div>
+                <div class="link-url">algorhythm26.netlify.app</div>
+            </a>
 
-    <p>Opens in a new tab ↗</p>
+            <a href="http://bills.edckprcas.co.in/" target="_blank" class="link-card">
+                <div class="link-title">Bills Portal</div>
+                <div class="link-url">bills.edckprcas.co.in</div>
+            </a>
+
+            <a href="http://kprcas.ac.in/" target="_blank" class="link-card">
+                <div class="link-title">KPRCAS Website</div>
+                <div class="link-url">kprcas.ac.in</div>
+            </a>
+
+            <a href="https://template.edckprcas.co.in/" target="_blank" class="link-card">
+                <div class="link-title">Template Hub</div>
+                <div class="link-url">template.edckprcas.co.in</div>
+            </a>
+
+            <a href="https://kprcas-duty-allotment.netlify.app/" target="_blank" class="link-card">
+                <div class="link-title">Duty Allotment</div>
+                <div class="link-url">kprcas-duty-allotment.netlify.app</div>
+            </a>
+
+            <a href="https://exam.edckprcas.co.in/" target="_blank" class="link-card">
+                <div class="link-title">Exam Portal</div>
+                <div class="link-url">exam.edckprcas.co.in</div>
+            </a>
+
+            <a href="https://cite-spotlight-kprcas.netlify.app/" target="_blank" class="link-card">
+                <div class="link-title">CITE Spotlight</div>
+                <div class="link-url">cite-spotlight-kprcas.netlify.app</div>
+            </a>
+        </div>
+
+        <a class="media-btn"
+           href="https://drive.google.com/drive/folders/1sBTirjD36uSM-ibhVrxiK7gyg6-BvWlj?usp=sharing"
+           target="_blank">
+            View Edited Photos / Media Work ↗
+        </a>
+    </div>
 </div>
 
 </body>
